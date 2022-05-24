@@ -1,0 +1,17 @@
+.task-description {
+  background-color: aliceblue;
+  padding: .8rem;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 30px 0 rgb(136, 136, 136);
+}
+
+.task-description__duration {
+  background-color: rgb(86, 236, 164);
+  color: rgb(115, 115, 115);
+  box-shadow: 5px 5px 10px 0 rgb(223, 223, 223);
+  padding: .6rem .8rem;
+  border-radius: 16px;
+}

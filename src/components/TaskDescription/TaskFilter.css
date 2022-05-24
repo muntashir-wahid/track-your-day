@@ -1,0 +1,20 @@
+.task-filter {
+  width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-filter label {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.task-filter__weekday {
+  background-color: white;
+  padding: .8rem 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  border-radius: 8px;
+}

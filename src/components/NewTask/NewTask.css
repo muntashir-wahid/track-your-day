@@ -1,0 +1,8 @@
+.new-task {
+  width: 90%;
+  background-color: #f0f8ff;
+  margin: 2rem auto;
+  box-shadow: 0 10px 30px 0 rgb(136 136 136);
+  border-radius: 12px;
+  padding: 1.6rem 2.2rem;
+}
