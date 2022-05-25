@@ -72,13 +72,17 @@ function TaskInputForm(props) {
     setTaskEndsAt("");
   };
 
+  const formEditCancleHandler = function () {
+    props.onCancleTaskInputForm(true);
+  };
+
   return (
     <form className="task-input__form" onSubmit={submitHandler}>
-      <div className="task-input__task">
+      <div className="task-inputs task-input__task">
         <label>Your Task</label>
         <input type="taxt" value={task} onChange={taskInputHandler} />
       </div>
-      <div className="task-input__starts">
+      <div className="task-inputs task-input__start">
         <label>Task Starts</label>
         <input
           type="datetime-local"
@@ -86,7 +90,7 @@ function TaskInputForm(props) {
           onChange={taskStartTimeHandler}
         />
       </div>
-      <div className="task-input__ends">
+      <div className="task-inputs task-input__end">
         <label>Task Ends</label>
         <input
           type="datetime-local"
@@ -95,9 +99,8 @@ function TaskInputForm(props) {
         />
       </div>
       <div className="task-input__btn">
-        <button type="submit" className="submit-btn">
-          Add Task
-        </button>
+        <button className="btn" type="button" onClick={formEditCancleHandler}>Cancle</button>
+        <button className="btn" type="submit">Add Task</button>
       </div>
     </form>
   );
