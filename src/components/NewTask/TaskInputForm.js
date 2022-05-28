@@ -99,8 +99,12 @@ function TaskInputForm(props) {
         />
       </div>
       <div className="task-input__btn">
-        <button className="btn" type="button" onClick={formEditCancleHandler}>Cancle</button>
-        <button className="btn" type="submit">Add Task</button>
+        <button className="btn" type="button" onClick={formEditCancleHandler}>
+          Cancle
+        </button>
+        <button className="btn" type="submit">
+          Add Task
+        </button>
       </div>
     </form>
   );

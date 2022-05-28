@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./TaskList.css";
 import TaskFilter from "./TaskFilter";
 import TaskDescription from "./TaskDescription";
+import TaskDescriptionChart from "./TaskDescriptionChart";
 
 function TaskList(props) {
   // Use state to hold and manipulate filtered weekday
@@ -38,6 +39,7 @@ function TaskList(props) {
         selectedWeedDayName={selectedWeedDay}
         onChangeWeedDay={changeWeedDayHandler}
       />
+      <TaskDescriptionChart taskDetails={props.taskDetailsList} />
       <ul className="task-list">{taskDescriptionContent}</ul>
     </section>
   );
