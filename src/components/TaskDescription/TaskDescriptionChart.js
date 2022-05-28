@@ -20,11 +20,11 @@ function TaskDescriptionChart(props) {
     return durationHour;
   };
 
-  // props.taskDetails.forEach(
-  //   (taskDetail) =>
-  //     (chartDataPoints[taskDetail.startTime.getDay()].totalWorkingHour +=
-  //       calcTaskDuration(taskDetail.startTime, taskDetail.endTime))
-  // );
+  props.taskDetails.forEach(
+    (taskDetail) =>
+      (chartDataPoints[taskDetail.startTime.getDay()].totalWorkingHour +=
+        calcTaskDuration(taskDetail.startTime, taskDetail.endTime))
+  );
 
   return <Chart dataPoints={chartDataPoints} />;
 }
