@@ -32,6 +32,7 @@ function TaskInputForm(props) {
     */
   };
   const taskStartTimeHandler = function (e) {
+    console.log(e.target.value);
     setTaskStartsAt(e.target.value);
 
     /*
@@ -61,6 +62,9 @@ function TaskInputForm(props) {
   // Handling form submit and creat an object to with the inputs
   const submitHandler = function (e) {
     e.preventDefault();
+    if (!task || !taskStartsAt || !taskEndsAt) {
+      return;
+    }
     const inputTaskDescription = {
       task: task,
       startTime: new Date(taskStartsAt),
