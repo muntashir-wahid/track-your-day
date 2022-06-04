@@ -1,5 +1,5 @@
 import React from "react";
-import "./TaskTime.css";
+import styles from "./TaskTime.module.css";
 
 function TaskTime(props) {
   const dayName = props.startsAt.toLocaleString("en-US", { weekday: "long" });
@@ -13,7 +13,7 @@ function TaskTime(props) {
   });
 
   return (
-    <div className="task-time">
+    <div className={styles["task-time"]}>
       <span>{dayName}</span>
       <span>
         {taskStartsAt} - {taskEndsAt}

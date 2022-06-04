@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./TaskList.css";
+import styles from "./TaskList.module.css";
 import TaskFilter from "./TaskFilter";
 import TaskDescription from "./TaskDescription";
 import TaskDescriptionChart from "./TaskDescriptionChart";
@@ -21,7 +21,7 @@ function TaskList(props) {
 
   // Create a dynamic variable to conditionaly render the content
   let taskDescriptionContent = (
-    <h5 className="message">You have no task today</h5>
+    <h5 className={styles.message}>You have no task today</h5>
   );
   if (filteredTaskDetails.length > 0) {
     taskDescriptionContent = filteredTaskDetails.map((taskDescription) => (
@@ -40,7 +40,7 @@ function TaskList(props) {
         onChangeWeedDay={changeWeedDayHandler}
       />
       <TaskDescriptionChart taskDetails={props.taskDetailsList} />
-      <ul className="task-list">{taskDescriptionContent}</ul>
+      <ul className={styles["task-list"]}>{taskDescriptionContent}</ul>
     </section>
   );
 }

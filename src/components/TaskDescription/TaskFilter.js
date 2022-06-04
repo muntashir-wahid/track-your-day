@@ -1,17 +1,16 @@
 import React from "react";
-import "./TaskFilter.css";
+import styles from "./TaskFilter.module.css";
 
 function TaskFilter(props) {
-
   const filterdeDayHandler = function (e) {
     props.onChangeWeedDay(e.target.value);
   };
 
   return (
-    <div className="task-filter">
+    <div className={styles["task-filter"]}>
       <label>Choose a Weekday</label>
       <select
-        className="task-filter__weekday"
+        className={styles["task-filter__weekday"]}
         onChange={filterdeDayHandler}
         value={props.selectedWeedDayName}
       >

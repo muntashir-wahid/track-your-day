@@ -1,12 +1,12 @@
 import React from "react";
-import "./AddNewTask.css";
+import styles from "./AddNewTask.module.css";
 
 function AddNewTask(props) {
-  const buttonClickHandler = function(e) {
+  const buttonClickHandler = function (e) {
     props.onEditInputForm(true);
-  }
+  };
   return (
-    <div className="edit-task">
+    <div className={styles["edit-task"]}>
       <button onClick={buttonClickHandler}>Add New Task</button>
     </div>
   );

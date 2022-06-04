@@ -1,10 +1,10 @@
 import React from "react";
-import "./Chart.css";
+import styles from "./Chart.module.css";
 import ChartBar from "./ChartBar";
 
 function Chart(props) {
   return (
-    <div className="task-description__chart">
+    <div className={styles["task-description__chart"]}>
       {props.dataPoints.map((dataPoint) => (
         <ChartBar
           key={dataPoint.dayName}

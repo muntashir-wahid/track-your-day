@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import TaskInputForm from "./TaskInputForm";
-import "./NewTask.css";
+import styles from "./NewTask.module.css";
 import AddNewTask from "./AddNewTask";
 
 function NewTask(props) {
-  // Lifting state 
+  // Lifting state
   const saveTaskDescriptionHandler = function (inputTaskDescription) {
     const taskDescription = {
       ...inputTaskDescription,
@@ -20,7 +20,7 @@ function NewTask(props) {
     setEditInputForm(!isCancle);
   };
   return (
-    <section className="new-task">
+    <section className={styles["new-task"]}>
       {editInputForm ? (
         <TaskInputForm
           onSaveTaskDescription={saveTaskDescriptionHandler}

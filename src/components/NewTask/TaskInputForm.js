@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./TaskInputForm.css";
+import styles from "./TaskInputForm.module.css";
+import Button from "../UI/Button";
 
 function TaskInputForm(props) {
   // useSate hooks for storing task description
@@ -81,34 +82,40 @@ function TaskInputForm(props) {
   };
 
   return (
-    <form className="task-input__form" onSubmit={submitHandler}>
-      <div className="task-inputs task-input__task">
-        <label>Your Task</label>
-        <input type="taxt" value={task} onChange={taskInputHandler} />
-      </div>
-      <div className="task-inputs task-input__start">
-        <label>Task Starts</label>
-        <input
-          type="datetime-local"
-          value={taskStartsAt}
-          onChange={taskStartTimeHandler}
-        />
-      </div>
-      <div className="task-inputs task-input__end">
-        <label>Task Ends</label>
-        <input
-          type="datetime-local"
-          value={taskEndsAt}
-          onChange={taskEndTimeHandler}
-        />
-      </div>
-      <div className="task-input__btn">
-        <button className="btn" type="button" onClick={formEditCancleHandler}>
-          Cancle
-        </button>
-        <button className="btn" type="submit">
-          Add Task
-        </button>
+    <form onSubmit={submitHandler}>
+      <div className={styles["form-control"]}>
+        <div className={styles["task-title"]}>
+          <label>Your Task</label>
+          <input type="taxt" value={task} onChange={taskInputHandler} />
+        </div>
+        <div className={styles["task-start"]}>
+          <label>Task Starts</label>
+          <input
+            type="datetime-local"
+            value={taskStartsAt}
+            onChange={taskStartTimeHandler}
+          />
+        </div>
+        <div className={styles["task-end"]}>
+          <label>Task Ends</label>
+          <input
+            type="datetime-local"
+            value={taskEndsAt}
+            onChange={taskEndTimeHandler}
+          />
+        </div>
+        <div className={styles["task-btns"]}>
+          <Button
+            className={styles.btn}
+            type="button"
+            onClick={formEditCancleHandler}
+          >
+            Cancle
+          </Button>
+          <Button className={styles.btn} type="submit">
+            Add Task
+          </Button>
+        </div>
       </div>
     </form>
   );
