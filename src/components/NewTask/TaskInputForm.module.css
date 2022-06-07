@@ -52,3 +52,16 @@ div.task-btns {
 .form-control input:focus {
   border-color: rgb(86, 236, 164);
 }
+
+@media (max-width: 770px) {
+  div.task-btns {
+    grid-column: 4 / 7;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 550px) {
+  div.task-btns {
+    grid-column: 1 / 7;
+  }
+}

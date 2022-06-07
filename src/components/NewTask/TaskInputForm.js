@@ -21,7 +21,7 @@ function TaskInputForm(props) {
   */
 
   // Event handlerd to handle user new task description
-  const taskInputHandler = function (e) {
+  const taskInputHandler = function(e) {
     setTask(e.target.value);
 
     /*
@@ -34,7 +34,7 @@ function TaskInputForm(props) {
     });
     */
   };
-  const taskStartTimeHandler = function (e) {
+  const taskStartTimeHandler = function(e) {
     setTaskStartsAt(e.target.value);
 
     /*
@@ -47,7 +47,7 @@ function TaskInputForm(props) {
     });
     */
   };
-  const taskEndTimeHandler = function (e) {
+  const taskEndTimeHandler = function(e) {
     setTaskEndsAt(e.target.value);
 
     /*
@@ -62,7 +62,7 @@ function TaskInputForm(props) {
   };
 
   // Handling form submit and creat an object to with the inputs
-  const submitHandler = function (e) {
+  const submitHandler = function(e) {
     e.preventDefault();
     if (!task || !taskStartsAt || !taskEndsAt) {
       setIsError({
@@ -92,16 +92,16 @@ function TaskInputForm(props) {
     setTaskEndsAt("");
   };
 
-  const formEditCancleHandler = function () {
+  const formEditCancleHandler = function() {
     props.onCancleTaskInputForm(true);
   };
 
-  const errorModalCancleHandler = function () {
+  const errorModalCancleHandler = function() {
     setIsError(null);
   };
 
   return (
-    <div>
+    <React.Fragment>
       {isError && (
         <ErrorModal
           title={isError.title}
@@ -145,7 +145,7 @@ function TaskInputForm(props) {
           </div>
         </div>
       </form>
-    </div>
+    </React.Fragment>
   );
 }
 
