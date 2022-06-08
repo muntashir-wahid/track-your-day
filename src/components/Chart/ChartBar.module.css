@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .4rem;
+  gap: 0.4rem;
 }
 
 .chart-bar {
@@ -18,10 +18,16 @@
 .chart-bar__inner {
   background-color: rgb(146, 146, 146);
   border-radius: inherit;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .chart-bar__label {
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+@media (max-width: 375px) {
+  .chart-bar__label {
+    font-size: 1rem;
+  }
 }
